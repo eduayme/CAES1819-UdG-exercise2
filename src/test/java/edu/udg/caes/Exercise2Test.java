@@ -33,6 +33,7 @@ public class Exercise2Test {
     public void testOneVectorNull()
     {
         a = null;
+
         b.add( 1 );
         b.add( 2 );
         b.add( 3 );
@@ -49,6 +50,7 @@ public class Exercise2Test {
     {
         a.add( 1 );
         a.add( 2 );
+
         b.add( 1 );
         b.add( 2 );
         b.add( null );
@@ -81,5 +83,4 @@ public class Exercise2Test {
 
         assertEquals( expected, result );
     }
-
 }
