@@ -13,7 +13,10 @@ public class Exercise2 {
      */
     public static Vector union (Vector a, Vector b)
     {
-        throw new UnsupportedOperationException("Non implemented yet");
+        Vector finalVector = new Vector();
+        finalVector.addAll( a );
+        finalVector.addAll( b );
+        return finalVector;
     }
 
 }
