@@ -14,8 +14,35 @@ public class Exercise2 {
     public static Vector union (Vector a, Vector b)
     {
         Vector finalVector = new Vector();
-        finalVector.addAll( a );
-        finalVector.addAll( b );
+
+        if( a == null && b != null )
+        {
+            finalVector = b;
+        }
+        else if( b == null && a != null )
+        {
+            finalVector = a;
+        }
+        else if( a == null && b == null )
+        {
+            throw new NullPointerException();
+        }
+        else
+        {
+            if( a.contains( null ) || b.contains( null ) )
+            {
+                throw new NullPointerException();
+            }
+            else
+            {
+                finalVector.addAll( a );
+                for( Object obj : b )
+                {
+                    if( !finalVector.contains( obj ) ) finalVector.add( obj );
+                }
+            }
+        }
+
         return finalVector;
     }
 
